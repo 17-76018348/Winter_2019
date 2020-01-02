@@ -1,4 +1,7 @@
 package homework1;
+
+import java.io.IOException;
+
 public abstract class Menu {
 	
 	int id;
@@ -7,6 +10,6 @@ public abstract class Menu {
 	String gender;
 	Customer customer;
 	
-	public abstract void on();
+	public abstract void on() throws IOException;
 	
 }

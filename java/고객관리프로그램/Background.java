@@ -1,13 +1,14 @@
 package homework1;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Background {
 	public static ArrayList<Customer> cus = new ArrayList<>();
 	public static int cus_num = 0;
-
-	public void menu() {
+	
+	public void menu() throws IOException {
 		int num = -1;
 		Scanner sc = new Scanner(System.in);
 		while (num != 6) {
