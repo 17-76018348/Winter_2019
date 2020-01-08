@@ -5,24 +5,21 @@ public class Customer {
 	private String gender;
 	private int point;
 	private int password;
-	public Customer()
-	{
+
+	public Customer() {
 		this.name = null;
 		this.gender = null;
 		this.point = 0;
 		this.password = -9999;
 	}
 
-	
 	public int getPassword() {
 		return password;
 	}
 
-
 	public void setPassword(int password) {
 		this.password = password;
 	}
-
 
 	public String getName() {
 		return name;
@@ -47,5 +44,5 @@ public class Customer {
 	public void setPoint(int point) {
 		this.point = point;
 	}
-	
+
 }

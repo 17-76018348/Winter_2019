@@ -41,7 +41,7 @@ public class Customer_Operate implements Constants{
 		{
 			for(Customer customer : this.customers.values())
 			{
-				System.out.println(customer.getName() + "/t" + customer.getGender() + "\t" + customer.getPoint());
+				System.out.println(customer.getName() + "\n" + customer.getGender() + "\n" + customer.getPoint());
 			}
 		}
 	}
