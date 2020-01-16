@@ -72,7 +72,7 @@ bool check(char *list){
 
 int main(void)
 {
-    char* list = "asdad{fvewve[fevsdvesfvsvevsd]vdvd}v(fv";
+    char* list;
     printf("%d",check(list));
     return 0;
 }
