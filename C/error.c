@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include<string.h>
+#include <string.h>
 #define MAX_STACK_SIZE 1000
 bool IsEmpty(int top){
     if(top <0)
@@ -72,7 +72,10 @@ bool check(char *list){
 
 int main(void)
 {
-    char* list;
+	FILE *fp;
+	fp = fopen("test.txt","wt");
+	
+    char* list = fp;
     printf("%d",check(list));
     return 0;
 }
