@@ -1,4 +1,4 @@
-package chatting_Client;
+package chattingClient;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,21 +8,21 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-import chatting_Server.ServerIn;
-import chatting_Server.ServerOut;
+import chattingServer.ServerIn;
+import chattingServer.ServerOut;
 
 public class ClientEx {
 	public static void main(String[] args) {
 		try {
-			Socket socket = new Socket("DESKTOP-R784730",5054);
-			
-			ClientIn in_thread = new ClientIn(socket);
-			
-			ClientOut out_thread = new ClientOut(socket);
-			
-			in_thread.start();
-			out_thread.start();
-		}catch(IOException e) {
+			Socket socket = new Socket("DESKTOP-R784730", 5054);
+
+			ClientIn inThread = new ClientIn(socket);
+
+			ClientOut outThread = new ClientOut(socket);
+
+			inThread.start();
+			outThread.start();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

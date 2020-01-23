@@ -1,15 +1,17 @@
-package chatting_Server;
+package chattingServer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-public class ServerIn extends Thread {
+public class ServerIn extends Thread implements Constants{
 	private Socket socket;
-	ServerIn(Socket socket){
+
+	ServerIn(Socket socket) {
 		this.socket = socket;
 	}
+
 	public void run() {
 		super.run();
 		try {
@@ -18,16 +20,16 @@ public class ServerIn extends Thread {
 			String receiveString;
 
 			while (true) {
-		
+
 				receiveString = reader.readLine();
 
 				if (receiveString == null) {
-					System.out.println("¿¬°á ²÷±è");
+					System.out.println(CONNECTFAIL);
 					break;
 				} else {
-					System.out.println("Å¬¶óÀÌ¾ðÆ®:" + receiveString);
+					System.out.println(CLIENTNAME + receiveString);
 				}
-				
+
 			}
 			reader.close();
 		} catch (IOException e) {

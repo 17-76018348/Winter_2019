@@ -1,12 +1,12 @@
-package chatting_Client;
-
+package chattingClient;
+import chattingServer.Constants;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class ClientOut extends Thread {
+public class ClientOut extends Thread implements Constants{
 	private Socket socket;
 
 	ClientOut(Socket socket) {
@@ -19,18 +19,13 @@ public class ClientOut extends Thread {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			PrintWriter writer = new PrintWriter(socket.getOutputStream());
 			String sendString;
-
 			while (true) {
-				
-					sendString = reader.readLine();
-
-					if (sendString.equals("exit"))
-						break;
-
-					writer.println(sendString);
-					writer.flush();
-				}
-			
+				sendString = reader.readLine();
+				if (sendString.equals(EXIT))
+					break;
+				writer.println(sendString);
+				writer.flush();
+			}
 			writer.close();
 			reader.close();
 			socket.close();
