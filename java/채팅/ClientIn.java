@@ -7,25 +7,27 @@ import java.net.Socket;
 
 public class ClientIn extends Thread {
 	private Socket socket;
-	
-	ClientIn(Socket socket){
+
+	ClientIn(Socket socket) {
 		this.socket = socket;
 	}
+
 	public void run() {
 		super.run();
-		
+
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			String receiveString;
-			
-			while(true)
-			{
-				receiveString = reader.readLine();
+
+			while (true) {
 				
-				System.out.println("서버:" + receiveString);
+					receiveString = reader.readLine();
+
+					System.out.println("서버:" + receiveString);
+				
 			}
-		}catch(IOException e) {
-			
+		} catch (IOException e) {
+
 		}
 	}
 }

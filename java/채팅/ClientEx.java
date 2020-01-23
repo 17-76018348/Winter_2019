@@ -14,7 +14,7 @@ import chatting_Server.ServerOut;
 public class ClientEx {
 	public static void main(String[] args) {
 		try {
-			Socket socket = new Socket("localhost",9999);
+			Socket socket = new Socket("DESKTOP-R784730",5054);
 			
 			ClientIn in_thread = new ClientIn(socket);
 			

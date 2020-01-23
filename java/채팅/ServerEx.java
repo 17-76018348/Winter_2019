@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class ServerEx {
 	public static void main(String[] args) {
 		try {
-			ServerSocket ser_socket = new ServerSocket(9999);
+			ServerSocket ser_socket = new ServerSocket(5054);
 			
 			Socket socket = ser_socket.accept();
 			ServerIn in_thread = new ServerIn(socket);

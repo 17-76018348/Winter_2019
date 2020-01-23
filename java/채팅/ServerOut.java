@@ -23,10 +23,11 @@ private Socket socket;
 			
 			while(true)
 			{
+			
 				sendString = reader.readLine();
-				
 				writer.println(sendString);
 				writer.flush();
+				
 			}
 		}catch(IOException e) {
 			e.printStackTrace();

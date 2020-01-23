@@ -8,31 +8,33 @@ import java.net.Socket;
 
 public class ClientOut extends Thread {
 	private Socket socket;
-	ClientOut(Socket socket){
+
+	ClientOut(Socket socket) {
 		this.socket = socket;
 	}
+
 	public void run() {
 		super.run();
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			PrintWriter writer = new PrintWriter(socket.getOutputStream());
 			String sendString;
-			
-			while(true)
-			{
-				sendString = reader.readLine();
+
+			while (true) {
 				
-				if(sendString.equals("exit"))
-					break;
+					sendString = reader.readLine();
+
+					if (sendString.equals("exit"))
+						break;
+
+					writer.println(sendString);
+					writer.flush();
+				}
 			
-				
-				writer.println(sendString);
-				writer.flush();
-			}
 			writer.close();
 			reader.close();
 			socket.close();
-		}catch(IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

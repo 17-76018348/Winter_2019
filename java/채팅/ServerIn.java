@@ -18,6 +18,7 @@ public class ServerIn extends Thread {
 			String receiveString;
 
 			while (true) {
+		
 				receiveString = reader.readLine();
 
 				if (receiveString == null) {
@@ -26,6 +27,7 @@ public class ServerIn extends Thread {
 				} else {
 					System.out.println("클라이언트:" + receiveString);
 				}
+				
 			}
 			reader.close();
 		} catch (IOException e) {
