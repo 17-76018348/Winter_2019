@@ -52,7 +52,9 @@ line = []
 text = []
 while(True):
 
-    print(sentence1[idx1],sentence2[idx2])
+    print(idx1)
+    print(idx2)
+    print('\n')
     if sentence1[idx1] == end :
         print("1")
         if cnt >= 4:
@@ -103,7 +105,11 @@ while(True):
             text.append(line)
             line,cnt,idx1,idx2 = clear(line,cnt,idx1,idx2)
         else:
-            line,cnt,idx1,dix2 = clear(line,cnt,idx1,idx2) 
+            line = []
+            cnt = 0
+            idx1 += 1
+            idx2 = 0
+            print(idx1,idx2)
               
     
     
