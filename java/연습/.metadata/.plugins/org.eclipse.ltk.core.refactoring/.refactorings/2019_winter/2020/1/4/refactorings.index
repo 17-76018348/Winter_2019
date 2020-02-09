@@ -1,0 +1,20 @@
+1579576246584	Rename type 'main'
+1579593509973	Delete element
+1579594897777	Delete element
+1579594946357	Rename package 'chatting'
+1579621704248	Rename type 'InThread'
+1579621768645	Rename type 'OutThread'
+1579621781431	Rename type 'InThread'
+1579621787203	Rename type 'OutThread'
+1579758078090	Rename type 'DemoClient'
+1579758086443	Rename type 'DemoServerrr'
+1579758121636	Delete element
+1579758123371	Delete element
+1579758391498	Delete element
+1579758824628	Rename type 'ServerIn'
+1579758831260	Rename type 'ServerSend'
+1579758835291	Rename type 'ServerOut'
+1579758840429	Rename type 'ClientOut'
+1579758846714	Rename type 'ClientIn'
+1579766114798	Rename package 'chatting_Server'
+1579766120880	Rename package 'chatting_Client'

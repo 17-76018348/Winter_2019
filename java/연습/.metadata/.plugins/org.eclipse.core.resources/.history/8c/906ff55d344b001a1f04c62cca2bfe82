@@ -1,0 +1,48 @@
+package serial;
+
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+	private final static int SERVER_PORT = 4000;
+
+    public static void main(String args[]){
+        ServerSocket serverSocket; // Client의 접속을 기다리는 역활을 함
+        Socket socket; // Client와 데이터 송수신 역활을 함
+
+        ObjectInputStream objectInputStream; // Class의 객체를 읽어올때 사용
+        PrintWriter printWriter; // 값을 전달할때 사용
+
+        try {
+            //서버 소켓 생성
+            serverSocket = new ServerSocket(SERVER_PORT);
+            System.out.println("Server Running");
+
+            while (true) {
+
+                System.out.println("before socket connect");
+                // 서버는 정지상태가 되며, 클라이언트의 접속을 기다립니다.
+                // 클라이언트의 접속이 되면 그 다음으로 넘어갑니다.
+                socket = serverSocket.accept();
+
+                System.out.println("after socket connect");
+                printWriter = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())));
+
+                // Client 로부터 객체를 읽어오는 역활을 하는 객체를 생성
+                objectInputStream = new ObjectInputStream(socket.getInputStream());
+                Order order = (Order)objectInputStream.readObject(); // readObject는 object 객체로 불러오기 때문에 형변화해야 합니다.
+                System.out.println(order.toString());
+
+
+                printWriter.write("ok");
+                printWriter.close(); // close() or flush()를 해줘야지 전해진다
+                socket.close(); // 여기서 socket 접속이 끊어져야 클라이언트가 종료가 됩니다.
+
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
