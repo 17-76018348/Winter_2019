@@ -1,7 +1,6 @@
-package customer_client;
+package homework1;
 
 public interface Constants {
-	public static final String TITLE = "Customer Management";
 	public static final String[] MENU = 
 		{
 				"0.고객 목록 출력",
@@ -12,8 +11,6 @@ public interface Constants {
 				"5.고객 삭제",
 				"6.프로그램 종료"
 		};
-	public static final String COMPLETE = "완료되었습니다";
-	public static final int MENU_NUM = 7;
 	public static final int PRINT_ALL = 0;
 	public static final int SIGN_UP = 1;
 	public static final int SET_INFO = 2;
@@ -21,15 +18,15 @@ public interface Constants {
 	public static final int SET_POINT = 4;
 	public static final int RM_CUSTOMER = 5;
 	public static final int EXIT = 6;
-	
-	public static final String DB_ID_LOGIN = "sql ID 입력:";
-	public static final String DB_PW_LOGIN = "sql password 입력:";
-	public static final String DB_CONNECT = "DB 연결 성공";
-	public static final String DB_NOT_CONNECT = "DB 연결 실패";
-	
+	public static final int MENU_NUM = 7;
+	public static final String NO_MORE_CUSTOMERS = "고객이 없습니다";
 	public static final String ENTER_PHONENUM = "전화번호를 입력하세요";
 	public static final String ENTER_NAME = "이름을 입력하세요";
 	public static final String ENTER_GENDER = "성별을 입력하세요";
+	public static final String COMPLETE = "완료되었습니다";
 	public static final String ENTER_PASSWORD = "비밀번호를 입력하세요";
-	public static final String CHANGE_POINT = "변경하실 포인트를 입력하세요"
-;}
+	public static final String LOGIN_SUCCESS = "로그인에 성공하였습니다";
+	public static final String ENTER_POINT = "변경하실 포인트를 입력하세요";
+	public static final String REMOVE_COMPLETE = "고객 삭제 완료";
+	
+}
