@@ -1,57 +1,18 @@
 package customer_client;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class Menual implements Constants{
-	private String url;
-	private String username;
-	private String password;
-	private String hashType;
-	private String query;
-	private Statement stmt;
-	private Connection conn;
+public class Operation implements Constants{
+
 	private Info info;
 	Scanner sc;
-	private HashMap<Integer, Customer> customers;
+//	private HashMap<Integer, Customer> customers;
 	private Customer customer;
-	Menual() {
+	Operation() {
 		this.sc = new Scanner(System.in);
-		this.url = "jdbc:oracle:thin:@DESKTOP-R784730:1521:orcl";
-		this.username = null;
-		this.password = null;
-		this.conn = null;
-		this.hashType = "SHA-256";
-		this.query = null;
-		this.stmt = null;
-		this.sc = new Scanner(System.in);
-	}
-	public boolean connect() {
-		System.out.print(DB_ID_LOGIN);
-		this.username = sc.next();
-		System.out.print(DB_PW_LOGIN);
-		this.password = sc.next();
 
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(this.url, this.username, this.password);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		if (conn == null) {
-			System.out.println(DB_CONNECT);
-			return false;
-		} else {
-			System.out.println(DB_NOT_CONNECT);
-			return true;
-		}
 	}
+
 	//  Menu 0
 	public void printAll() {
 		info = new Info();

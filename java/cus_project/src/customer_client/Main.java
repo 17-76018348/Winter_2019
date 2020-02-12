@@ -8,7 +8,7 @@ public class Main implements Constants{
 		// TODO Auto-generated method stub
 		int mode = 0;
 		Scanner sc = new Scanner(System.in);
-		Menual menual  = new Menual();
+		Operation oper  = new Operation();
 		System.out.println(TITLE);
 		
 		while(true) {
@@ -19,11 +19,11 @@ public class Main implements Constants{
 				mode = sc.nextInt();
 			} while(mode < 0 || mode > MENU_NUM - 2);
 			
-			if (mode == PRINT_ALL) menual.printAll();
-			else if (mode == SIGN_UP) menual.signUp();
-			else if (mode == SET_INFO) menual.setInfo();
-			else if (mode == GET_POINT) menual.getPoint();
-			else if (mode == SET_POINT) menual.setInfo();
+			if (mode == PRINT_ALL) oper.printAll();
+			else if (mode == SIGN_UP) oper.signUp();
+			else if (mode == SET_INFO) oper.setInfo();
+			else if (mode == GET_POINT) oper.getPoint();
+			else if (mode == SET_POINT) oper.setInfo();
 			else if (mode == EXIT) break;
 			
 			
