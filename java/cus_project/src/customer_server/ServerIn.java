@@ -22,15 +22,15 @@ public class ServerIn extends Thread {
 		try {
 			is = this.socket.getInputStream();
 			ois = new ObjectInputStream(is);
-			Info info = (Info) ois.readObject();
-			time = new Date();
-			String curTime = format1.format(time);
-			System.out.println(curTime);
-			MailBoxSer.keep(info);
-			System.out.println("수신 완료");
-			is.close();
-			ois.close();
-			this.socket.close();
+			while(true) {
+				Info info = (Info) ois.readObject();
+				time = new Date();
+				String curTime = format1.format(time);
+				System.out.println(curTime);
+				MailBoxSer.keep(info);
+				System.out.println("수신 완료");
+			}
+			
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}

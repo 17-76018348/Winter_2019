@@ -24,15 +24,15 @@ public class ClientIn extends Thread{
 		try {
 			is = this.socket.getInputStream();
 			ois = new ObjectInputStream(is);
-			Info info = (Info) ois.readObject();
-			time = new Date();
-			String time1 = format1.format(time);
-			MailBoxCli.keep(info);
-			System.out.println(time1);
-			System.out.println("수신 완료");
-			is.close();
-			ois.close();
-			this.socket.close();
+			while(true) {
+				Info info = (Info) ois.readObject();
+				time = new Date();
+				String time1 = format1.format(time);
+				MailBoxCli.keep(info);
+				System.out.println(time1);
+				System.out.println("수신 완료");
+			}
+			
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
