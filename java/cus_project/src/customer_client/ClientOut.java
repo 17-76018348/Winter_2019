@@ -22,7 +22,7 @@ public class ClientOut extends Thread{
 			OutputStream os = socket.getOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(os);
 			oos.writeObject(info);
-
+			System.out.println("송신 완료");
 			oos.close();
 			os.close();
 			this.socket.close();

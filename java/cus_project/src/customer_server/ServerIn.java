@@ -4,14 +4,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.Socket;
-
-import chattingServer.Unit;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ServerIn extends Thread {
 	private Socket socket;
 	private InputStream is;
 	private ObjectInputStream ois;
-
+	SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+	Date time;
 	ServerIn(Socket socket) {
 		this.socket = socket;
 	}
@@ -22,7 +23,11 @@ public class ServerIn extends Thread {
 			is = this.socket.getInputStream();
 			ois = new ObjectInputStream(is);
 			Info info = (Info) ois.readObject();
-
+			time = new Date();
+			String curTime = format1.format(time);
+			System.out.println(curTime);
+			MailBoxSer.keep(info);
+			System.out.println("수신 완료");
 			is.close();
 			ois.close();
 			this.socket.close();
