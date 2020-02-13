@@ -12,7 +12,7 @@ public class ServerIn extends Thread implements Constants {
 	private InputStream is;
 	private ObjectInputStream ois;
 	
-	ServerIn(Socket socket) {
+	public ServerIn(Socket socket) {
 		this.socket = socket;
 	}
 

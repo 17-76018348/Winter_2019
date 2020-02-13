@@ -72,15 +72,7 @@ public class Operation implements Constants{
 	}
 	//  Menu 4
 	public void setPoint() {
-		info = new Info();
-		info.setMenu(SET_POINT);
-		customer = new Customer();
-		System.out.println(ENTER_PHONENUM);
-		customer.setPhoneNum(sc.nextInt());
-		System.out.println(ENTER_PASSWORD);
-		customer.setPassword(sc.nextInt());
-		System.out.println(CHANGE_POINT);
-		//통신
+		System.out.println("두칸만 위로 가면 정보수정 하는거 있는데 그거 쓰쇼 사람 귀찮게 하네");
 		
 	}
 	//  Menu 5

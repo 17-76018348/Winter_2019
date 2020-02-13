@@ -1,7 +1,8 @@
-package customer_client;
+package customer_server;
 
 public class Customer {
 	private String name;
+
 	private String gender;
 	private int PhoneNum;
 	private int password;
@@ -10,8 +11,11 @@ public class Customer {
 		this.gender = null;
 		this.point = 0;
 		this.password = -1;
+
 		this.PhoneNum = -1;
 	}
+
+
 	public int getPhoneNum() {
 		return PhoneNum;
 	}
