@@ -72,7 +72,7 @@ public class Operation implements Constants{
 	}
 	//  Menu 4
 	public void setPoint() {
-		System.out.println("두칸만 위로 가면 정보수정 하는거 있는데 그거 쓰쇼 사람 귀찮게 하네");
+		System.out.println("두칸만 위로 가면 정보수정 하는거 있는데 그거 쓰쇼 그거 포인트도 됩니다 사람 귀찮게 하네");
 		
 	}
 	//  Menu 5
