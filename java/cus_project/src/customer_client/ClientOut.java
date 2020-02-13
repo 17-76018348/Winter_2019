@@ -7,17 +7,16 @@ import java.net.Socket;
 
 
 
-public class ClientOut extends Thread{
+public class ClientOut {
 	private Socket socket;
-	private Info info;
+	ClientIn clieIn;
 
-	ClientOut(Socket socket, Info info) {
+	ClientOut(Socket socket) {
 		this.socket = socket;
-		this.info = info;
+		clieIn = new ClientIn(socket);
 	}
 
-	public void run() {
-		super.run();
+	public void send(Info info) {
 		try {
 			OutputStream os = socket.getOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(os);
@@ -25,7 +24,6 @@ public class ClientOut extends Thread{
 			System.out.println("송신 완료");
 			oos.close();
 			os.close();
-			this.socket.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

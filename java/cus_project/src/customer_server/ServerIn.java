@@ -13,8 +13,10 @@ public class ServerIn extends Thread {
 	private ObjectInputStream ois;
 	SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
 	Date time;
+	ServerOut sevOut;
 	ServerIn(Socket socket) {
 		this.socket = socket;
+		sevOut = new ServerOut(this.socket);
 	}
 
 	public void run() {
@@ -28,6 +30,8 @@ public class ServerIn extends Thread {
 				String curTime = format1.format(time);
 				System.out.println(curTime);
 				MailBoxSer.keep(info);
+				//처리
+				sevOut.send(MailBoxSer.read());
 				System.out.println("수신 완료");
 			}
 			

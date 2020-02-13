@@ -18,7 +18,7 @@ public class ClientIn extends Thread{
 	ClientIn(Socket socket) {
 		this.socket = socket;
 	}
-
+	
 	public void run() {
 		super.run();
 		try {

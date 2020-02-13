@@ -11,12 +11,10 @@ public class CommuServer {
 		try {
 			ServerSocket servSocket = new ServerSocket(6670);
 			Socket socket = servSocket.accept();
-			
-			ServerIn inThread = new ServerIn(socket);
-//			ServerOut outThread = new ServerOut(socket);
-			
+			ServerIn inThread = new ServerIn(socket);			
 			inThread.start();
-//			outThread.start();
+			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

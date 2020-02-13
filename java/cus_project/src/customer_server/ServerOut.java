@@ -5,17 +5,14 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-public class ServerOut extends Thread {
+public class ServerOut {
 	private Socket socket;
-	private Info info;
 
-	ServerOut(Socket socket, Info info) {
+	ServerOut(Socket socket) {
 		this.socket = socket;
-		this.info = info;
 	}
 
-	public void run() {
-		super.run();
+	public void send(Info info) {
 		try {
 			OutputStream os = socket.getOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(os);
@@ -24,7 +21,7 @@ public class ServerOut extends Thread {
 			System.out.println("송신 완료");
 			oos.close();
 			os.close();
-			this.socket.close();
+
 
 		} catch (IOException e) {
 			e.printStackTrace();
