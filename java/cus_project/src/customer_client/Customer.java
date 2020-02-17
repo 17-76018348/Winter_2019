@@ -5,6 +5,7 @@ public class Customer {
 	private String gender;
 	private int PhoneNum;
 	private int password;
+
 	public Customer() {
 		this.name = null;
 		this.gender = null;
@@ -12,6 +13,7 @@ public class Customer {
 		this.password = -1;
 		this.PhoneNum = -1;
 	}
+
 	public int getPhoneNum() {
 		return PhoneNum;
 	}
@@ -21,8 +23,6 @@ public class Customer {
 	}
 
 	private int point;
-
-	
 
 	public int getPassword() {
 		return password;

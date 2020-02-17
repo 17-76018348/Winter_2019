@@ -11,9 +11,10 @@ public class ServerIn extends Thread {
 	private Socket socket;
 	private InputStream is;
 	private ObjectInputStream ois;
-	SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+	SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	Date time;
 	ServerOut sevOut;
+
 	ServerIn(Socket socket) {
 		this.socket = socket;
 		sevOut = new ServerOut(this.socket);
@@ -24,17 +25,17 @@ public class ServerIn extends Thread {
 		try {
 			is = this.socket.getInputStream();
 			ois = new ObjectInputStream(is);
-			while(true) {
+			while (true) {
 				Info info = (Info) ois.readObject();
 				time = new Date();
 				String curTime = format1.format(time);
 				System.out.println(curTime);
 				MailBoxSer.keep(info);
-				//贸府
+				// 贸府
 				sevOut.send(MailBoxSer.read());
 				System.out.println("荐脚 肯丰");
 			}
-			
+
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}

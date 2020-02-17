@@ -17,11 +17,10 @@ public class ServerOut {
 			OutputStream os = socket.getOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(os);
 			oos.writeObject(info);
-			
+
 			System.out.println("송신 완료");
 			oos.close();
 			os.close();
-
 
 		} catch (IOException e) {
 			e.printStackTrace();
