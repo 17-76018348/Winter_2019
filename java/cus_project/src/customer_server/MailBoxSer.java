@@ -1,7 +1,7 @@
 package customer_server;
 
 public class MailBoxSer {
-	private static Info info;
+	public static Info info;
 	public static boolean isRead;
 
 	MailBoxSer() {

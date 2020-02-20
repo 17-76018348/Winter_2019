@@ -9,7 +9,7 @@ public class Info implements Serializable{
 	private int menu;
 	HashMap<Integer, Customer> customers;
 	private Customer customer;
-	private String result;
+	private String[] result;
 
 	Info() {
 		menu = -1;
@@ -42,11 +42,11 @@ public class Info implements Serializable{
 		this.customers = customers;
 	}
 
-	public String getResult() {
+	public String[] getResult() {
 		return result;
 	}
 
-	public void setResult(String result) {
+	public void setResult(String[] result) {
 		this.result = result;
 	}
 

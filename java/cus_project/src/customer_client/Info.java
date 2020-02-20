@@ -7,12 +7,12 @@ public class Info implements Serializable{
 	private int menu;
 	HashMap<Integer, Customer> customers;
 	private Customer customer;
-	private String result;
+	private String target;
 
 	Info() {
 		menu = -1;
 		customers = null;
-		result = null;
+		target = null;
 		customer = null;
 	}
 
@@ -40,12 +40,12 @@ public class Info implements Serializable{
 		this.customers = customers;
 	}
 
-	public String getResult() {
-		return result;
+	public String gettarget() {
+		return target;
 	}
 
-	public void setResult(String result) {
-		this.result = result;
+	public void settarget(String target) {
+		this.target = target;
 	}
 
 }

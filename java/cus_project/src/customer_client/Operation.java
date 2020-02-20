@@ -20,16 +20,23 @@ public class Operation implements Constants {
 		info = new Info();
 		info.setMenu(PRINT_ALL);
 		clieOut.send(info);
-		// ¼ö½Å
+//		while(true) {
+//			if(MailBoxCli.isRead == false) {
+//				
+//			}
+//		}
 	}
 
 	// Menu 1
 	public void signUp() {
 		info = new Info();
+		String target;
 		info.setMenu(SIGN_UP);
 		customer = new Customer();
 		System.out.println(ENTER_PHONENUM);
 		customer.setPhoneNum(sc.nextInt());
+		System.out.println(ENTER_TARGET);
+		target = sc.next();
 		System.out.println(ENTER_NAME);
 		customer.setName(sc.next());
 		System.out.println(ENTER_GENDER);

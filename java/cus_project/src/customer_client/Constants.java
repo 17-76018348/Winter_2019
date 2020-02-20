@@ -31,5 +31,6 @@ public interface Constants {
 	public static final String ENTER_NAME = "이름을 입력하세요";
 	public static final String ENTER_GENDER = "성별을 입력하세요";
 	public static final String ENTER_PASSWORD = "비밀번호를 입력하세요";
-	public static final String CHANGE_POINT = "변경하실 포인트를 입력하세요"
-;}
+	public static final String CHANGE_POINT = "변경하실 포인트를 입력하세요";
+	public static final String ENTER_TARGET = "변경하실 항목을 입력하세요";
+}

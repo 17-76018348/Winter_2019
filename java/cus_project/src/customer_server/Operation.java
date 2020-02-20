@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import homework1.Customer;
 
 public class Operation implements Constants {
 
@@ -67,7 +66,7 @@ public class Operation implements Constants {
 						+ rs.getString(CUSTOMER_TABLE_ATTRS[2]) + TAP + rs.getString(CUSTOMER_TABLE_ATTRS[3]);
 				idx++;
 			}
-			// 통신
+			MailBoxSer.info.setResult(msg);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -75,20 +74,13 @@ public class Operation implements Constants {
 
 	public void signUp() {
 		// 통신
-		Customer cus = new Customer();
-		// Customer customer = info.getcustomer;
-//		cus.setPhoneNum();
-//		cus.setName();
-//		cus.setGender();
-//		cus.setPassword();
-//		cus.setPoint();
-//		register2DP(cus);
-
+		register2DB(MailBoxSer.info.getCustomer());
 	}
 
 	public void setInfo() {
 		// 통신
 		//
+//		MailBoxSer.info.getCustomer()
 		String target = null; // 통신
 		String targetValue = null; // 통신
 		String phoneNum = null;
@@ -118,6 +110,8 @@ public class Operation implements Constants {
 				if (rs.getString("PHONE_NUM").equals(phoneNum))
 					System.out.println("1");
 				// 통신 rs.getString(point) 보냄
+				
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -147,7 +141,7 @@ public class Operation implements Constants {
 		return buf.toString();
 	}
 
-	private void register2DB(Customer cus) {
+	private void register2DB(customer_client.Customer cus) {
 		this.query = "INSERT INTO " + CUSTOMER_TABLE_NAME + " VALUES";
 		try {
 			this.stmt = this.conn.createStatement();

@@ -21,4 +21,12 @@ public interface Constants {
 	public static final String SQL_COMMA = "','";
 	public static final String SQL_INT_COMMA = ",";
 	public static final String SQL_INT_CLOSE = ")";
+	public static final int MENU_NUM = 7;
+	public static final int PRINT_ALL = 0;
+	public static final int SIGN_UP = 1;
+	public static final int SET_INFO = 2;
+	public static final int GET_POINT = 3;
+	public static final int SET_POINT = 4;
+	public static final int RM_CUSTOMER = 5;
+	public static final int EXIT = 6;
 }
