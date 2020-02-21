@@ -1,5 +1,6 @@
 package customer_client;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Operation implements Constants {
@@ -9,7 +10,7 @@ public class Operation implements Constants {
 	private Customer customer;
 	ClientOut clieOut;
 
-	Operation() {
+	Operation() throws IOException {
 		this.sc = new Scanner(System.in);
 		CommuClient commu = new CommuClient();
 		clieOut = new ClientOut(commu.getSocket());

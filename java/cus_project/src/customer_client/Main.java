@@ -1,10 +1,11 @@
 package customer_client;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main implements Constants {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		int mode = 0;
 		Scanner sc = new Scanner(System.in);
