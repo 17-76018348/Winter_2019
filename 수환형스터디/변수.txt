@@ -1,0 +1,21 @@
+1. snake , camel
+	snake    modify_fefe_fdf
+	camel	modifyCmdwCoii
+
+
+
+
+1. 동사를 쓰세요 getset modify 
+2. 그니까 변소명에는 동사를 쓰지 마세요 최대한
+	cnt_customer            customer_num
+3. 변수명에ㅔ 제발 전치사좀 쓰지 마세요
+	number_of_customer:
+4.단수형 복수형 제발 구분해주세요
+	s쓰거나
+	customer_list
+5. 상수로 쓸거면 제발 대문자로 쓰세요 안바뀌는 값임을 명시해주세요
+6.너무길어지면 적당히 잘라주세요 
+	obj info 
+함수 1415 변수명 8글자 
+7.상수는 길어도 되니까 뭔지 알게
+
