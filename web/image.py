@@ -17,3 +17,45 @@ def getImage(keyword,no):
         file.write(img_con)
         file.close()
         print(img_link)
+
+
+epochs = 30
+lr = 0.001
+
+self.model = nn.Sequential(
+        nn.Dropout(p = p),
+        nn.Linear(28*28,128),
+        nn.ReLU(),
+        nn.Dropout(p = p),
+        nn.Linear(128,64),
+        nn.ReLU(),
+
+        nn.Linear(64,10),
+        nn.LogSoftmax(dim = 1)
+    )
+model = MNIST(p = 0.1).to(device)
+
+
+
+self.con = nn.Sequential(
+                nn.Conv2d(1, 9, 3),
+                nn.ReLU(True),
+                
+                nn.Conv2d(9, 16, 3),
+                nn.ReLU(True),
+                nn.MaxPool2d(2,2),
+
+            )
+self.fcl = nn.Sequential(
+        
+        nn.Linear(12*12*16,128),
+        nn.ReLU(True),
+        
+        nn.Dropout(p = p),
+        nn.Linear(128, 64),
+        nn.ReLU(True),
+        
+        nn.Linear(64,10),
+        nn.LogSoftmax(dim = 1)
+)
+model = MNIST(p = 0.1).to(device)
