@@ -14,3 +14,10 @@
   + [Coupang_kf94](https://github.com/17-76018348/Winter_2019/blob/master/web/find_kf94_coupang.py)
   + [Image_crawling](https://github.com/17-76018348/Winter_2019/blob/master/web/image_crawling.py)
   + [Homepage_crawling](https://github.com/17-76018348/Winter_2019/blob/master/web/web.py)
+* Python
+  + [chr_num](https://github.com/17-76018348/Winter_2019/blob/master/%ED%8C%8C%EC%9D%B4%EC%8D%AC/dic.py)
+  + [find_same](https://github.com/17-76018348/Winter_2019/blob/master/%ED%8C%8C%EC%9D%B4%EC%8D%AC/find_same.py)
+  + [dictionary_shortcode](https://github.com/17-76018348/Winter_2019/blob/master/%ED%8C%8C%EC%9D%B4%EC%8D%AC/short_code.py)
+  + [string_filter](https://github.com/17-76018348/Winter_2019/blob/master/%ED%8C%8C%EC%9D%B4%EC%8D%AC/string_hw.py)
+  + [Test](https://github.com/17-76018348/Winter_2019/blob/master/%ED%8C%8C%EC%9D%B4%EC%8D%AC/winter_Test.ipynb)
+  
